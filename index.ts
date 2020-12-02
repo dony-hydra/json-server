@@ -29,9 +29,9 @@ function generateEmployees() {
   return { data: employees };
 }
 
-server.get("/api/employees", (req, res) => {
-  res.status(200).json(generateEmployees());
-});
+// server.get("/api/employees", (req, res) => {
+//   res.status(200).json(generateEmployees());
+// });
 
 server.use(router);
 
