@@ -1,26 +1,27 @@
 const faker = require("faker");
 
 export default interface Employee {
-  id: string;
+  id: number;
   lastName: string;
   firstName: string;
+  email: string;
 }
 
-function generateEmployees() {
-  var employees = [];
+export function generateEmployees() {
+  var employees: Array<Employee> = [];
 
-  for (var id = 0; id < 50; id++) {
+  for (var id = 0; id < 10; id++) {
     var firstName = faker.name.firstName();
     var lastName = faker.name.lastName();
     var email = faker.internet.email();
 
     employees.push({
       id: id,
-      first_name: firstName,
-      last_name: lastName,
+      lastName: firstName,
+      firstName: lastName,
       email: email,
     });
   }
 
-  return { data: employees };
+  return employees;
 }

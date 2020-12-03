@@ -1,12 +1,12 @@
-import faker from "faker";
+const faker = require("faker");
 
-function generateEmployees(): any {
-  var employees = [];
+function generateEmployees() {
+  let employees = [];
 
-  for (var id = 0; id < 50; id++) {
-    var firstName = faker.name.firstName();
-    var lastName = faker.name.lastName();
-    var email = faker.internet.email();
+  for (let id = 0; id < 50; id++) {
+    let firstName = faker.name.firstName();
+    let lastName = faker.name.lastName();
+    let email = faker.internet.email();
 
     employees.push({
       id: id,
@@ -19,4 +19,4 @@ function generateEmployees(): any {
   return { employees: employees };
 }
 
-export default generateEmployees;
+export default { generateEmployees };
